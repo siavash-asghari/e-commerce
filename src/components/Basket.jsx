@@ -24,7 +24,7 @@ const Basket = () => {
                                 <h6>{product.title}</h6>
                             </div>
                             <div className='counterBtn'>
-                                <p>{product.price}</p>
+                                <p>$ {product.price}</p>
                                 <CounterItemProduct id={product.id} count={product.count} />
                                 <Trash id={product.id} />
                             </div>

@@ -10,7 +10,7 @@ const Banners = () => {
     return (
         <section>
             <div className='cont'>
-               <div className='row m-0 mask'>
+               <div className='row mask'>
                 <div className='col-lg-6 col-md-6 col-sm-12 image1'>
                     <img className='img1' alt='image01' src={image01} />
                 </div>
