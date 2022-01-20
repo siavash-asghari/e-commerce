@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import { ProductsContext } from '../contexts/ProductsContext'
+import Product from './Product'
 
 
 const Shop = () => {
@@ -19,16 +20,20 @@ const Shop = () => {
                 </div>
 
                 <div className='d-flex'>
-                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/men's clothing")}>
+                    {/* <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/men's clothing")}> */}
+                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("men's clothing")}>
                         <Nav.Link>مردانه</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/women's clothing")}>
+                    {/* <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/women's clothing")}> */}
+                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("women's clothing")}>
                         <Nav.Link>زنانه</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/jewelery")}>
+                    {/* <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/jewelery")}> */}
+                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("jewelery")}>
                         <Nav.Link>جواهرات</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/electronics")}>
+                    {/* <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("/category/electronics")}> */}
+                    <Nav.Item style={{ fontSize: '15px' }} as="li" onClick={() => handleCategory("electronics")}>
                         <Nav.Link>الکترونیک</Nav.Link>
                     </Nav.Item>
                     <Nav.Item as="li" onClick={() => handleCategory('')}>
@@ -37,7 +42,8 @@ const Shop = () => {
                 </div>
             </Nav>
             <div className='row'>
-                {productComponent}
+                {/* {productComponent} */}
+                <Product />
             </div>
         </section>
     )

@@ -1,5 +1,4 @@
 import React, { useState, createContext, useEffect } from 'react';
-import Product from '../components/Product';
 
 export const ProductsContext = createContext();
 
@@ -7,19 +6,19 @@ export const ProductsContext = createContext();
 const ProductsContextProvider = (props) => {
 
     const [products, setProducts] = useState([])
-    const [category, setCategory] = useState('')
+    const [category, setCategory] = useState([])
     const [basketClassName, setBasketClassName] = useState('basketEmpty')
     const [basketProduct, setBasketProduct] = useState([])
     const [countBasket, setCountBasket] = useState(0)
     const [urlSinglePruduct, setUrlSinglePruduct] = useState('')
 
+   
+
 
 
     useEffect(() => {
-        const url = `https://fakestoreapi.com/products${category}`
-        // fetch(url)
-        //     .then(result => result.json())
-        //     .then(data => setProducts(data))
+        const url = "https://fakestoreapi.com/products"
+
         const apiFetch = async () => {
             const result = await fetch(url);
             const data = await result.json();
@@ -28,8 +27,12 @@ const ProductsContextProvider = (props) => {
         apiFetch()
     }, [category])
 
+
     const handleCategory = (category) => {
-        setCategory(category)
+        const catg = products.filter(categoryPro => (
+            categoryPro.category === category
+        ))
+        category === '' ? setCategory(products) : setCategory(catg)
     }
 
 
@@ -39,30 +42,13 @@ const ProductsContextProvider = (props) => {
     }     
 
 
-    const productComponent = products.map(product => (
-        <Product
-            category={product.category}
-            description={product.description}
-            id={product.id}
-            image={product.image}
-            price={product.price}
-            rating={product.rating}
-            count={product.count}
-            rate={product.rating.rate}
-            title={product.title}
-            key={product.id}
-            product={product}
-            products={products}
-        />
-    ))
 
     const handleAddBasket = (id) => {
 
         const product = products.find(item => item.id === id)
         const index = basketProduct.findIndex(item => item.id === product.id)
         product.length !== 0 && setBasketClassName('basketFull')
-        // console.log(product)
-        // console.log(index)
+
 
         if (index < 0) {
             setBasketProduct([...basketProduct, { ...product, count: 1 }])
@@ -72,8 +58,6 @@ const ProductsContextProvider = (props) => {
             basketItem[0].count++;
             setBasketProduct(basketProduct)
 
-            // console.log(basketProduct)
-            //    setcountItemBasket(basketProduct[index].count) 
         }
     }
 
@@ -101,7 +85,6 @@ const ProductsContextProvider = (props) => {
         products,
         category,
         handleCategory,
-        productComponent,
         handleAddBasket,
         basketClassName,
         basketProduct,
