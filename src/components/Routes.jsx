@@ -46,10 +46,7 @@ const Router = () => {
                     <Route path='/shop' component={Shop} />
                     <Route path='/contact' component={Contact} />
                     <Route path='/about' component={About} />
-                    <Route
-                        path='/product/:id'
-                        component={SingleProduct}
-                    />
+                    <Route path='/product/:id' component={SingleProduct} />
                     <Route component={NotFound} />
                 </Switch>
                 <Footer menu={menu} />

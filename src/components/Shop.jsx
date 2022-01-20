@@ -7,11 +7,11 @@ import Product from './Product'
 const Shop = () => {
 
 
-    const { handleCategory, productComponent } = useContext(ProductsContext)
+    const { handleCategory } = useContext(ProductsContext)
 
 
     return (
-        <section className='container'>
+        <section className='container-fluid'>
             <Nav as="ul" className='my-4 d-flex justify-content-between align-items-center'>
                 <div className='d-flex'>
                     <Nav.Item style={{ fontSize: '22px' }} as="li">
@@ -41,10 +41,9 @@ const Shop = () => {
                     </Nav.Item>
                 </div>
             </Nav>
-            <div className='row'>
-                {/* {productComponent} */}
+            {/* <div className='row'> */}
                 <Product />
-            </div>
+            {/* </div> */}
         </section>
     )
 }
