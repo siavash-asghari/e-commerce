@@ -1,0 +1,16 @@
+.navFooter{
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    padding: 4px;
+    font-size: 14px;
+}
+.wrapFooter{
+    /* position: absolute; */
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+}

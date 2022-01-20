@@ -1,0 +1,13 @@
+.trashTitle{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.trash{
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+.trash:hover{
+    color: red;
+}

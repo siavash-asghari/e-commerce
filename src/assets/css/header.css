@@ -1,0 +1,91 @@
+.btnMenu {
+    display: none !important;
+}
+
+.canvas {
+    background-color: #FFF8F3;
+}
+
+.search {
+    font-size: 28px;
+}
+
+.search:hover {
+    font-size: 28px;
+    color: #1C6DD0;
+    cursor: pointer;
+}
+
+.shoppingBag {
+    font-size: 28px;
+}
+
+.shoppingBag:hover {
+    color: #1C6DD0;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: 1px;
+    left: 31px;
+}
+
+.basketEmpty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: absolute;
+    left: 5px;
+    box-shadow: 0 5px 10px 2px rgb(0 0 0 / 20%);
+    height: 200px;
+    width: 250px;
+    background-color: #FFF8F3;
+    background-image: url(../image/bc.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 25px;
+}
+
+.basketEmpty:after {
+    content: 'سبد خرید شما خالی است.';
+    font-size: 16px;
+    position: absolute;
+    bottom: 21px;
+    left: 45px;
+}
+
+.basketFull {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: absolute;
+    left: 5px;
+    box-shadow: 0 5px 10px 2px rgb(0 0 0 / 20%);
+    height: 200px;
+    width: 250px;
+    background-color: #FFF8F3;
+    overflow-y: scroll;
+}
+
+/* .imgBasket {
+    height: 90px;
+} */
+
+.shoppingBag:hover {
+    display: block !important;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .navbarMenu {
+        display: none !important;
+    }
+
+    .btnMenu {
+        display: block !important;
+    }
+}
