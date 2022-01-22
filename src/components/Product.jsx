@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import '.././assets/css/product.css'
 import AddToBasketButton from './AddToBasketButton'
 import { ProductsContext } from '../contexts/ProductsContext'
@@ -11,9 +11,6 @@ const Product = () => {
 
 
     const { handleSingleProduct, products, category } = useContext(ProductsContext)
-
-
-
 
 
     return (
