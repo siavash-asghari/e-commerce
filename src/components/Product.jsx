@@ -6,20 +6,18 @@ import { Link } from 'react-router-dom'
 
 
 
-
 const Product = () => {
 
-
     const { handleSingleProduct, products, category } = useContext(ProductsContext)
-
+   
+    
 
     return (
         <>
-
             <div className='row'>
                 {
                     category.map(product => (
-                        <section className='col-xl-3 col-lg-4 col-md-6 col-sm-6 product' key={product.id}>
+                        <section className='col-xl-3 col-lg-3 col-md-4 col-sm-6 product' key={product.id}>
                             <div className='d-flex flex-column align-items-center'>
                                 <div className='imageProduct'>
                                     <Link to={`/product/${product.id}`} >
@@ -52,7 +50,7 @@ const Product = () => {
                 <div className='newRow'>
                     {
                         products.map(product => (
-                            <section className='col-xl-3 col-lg-4 col-md-6 col-sm-6 product' key={product.id}>
+                            <section className='col-xl-3 col-lg-3 col-md-4 col-sm-6 product' key={product.id}>
                                 <div className='d-flex flex-column align-items-center'>
                                     <div className='imageProduct'>
                                         <Link to={`/product/${product.id}`} >

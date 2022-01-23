@@ -41,9 +41,9 @@ const Shop = () => {
                     </Nav.Item>
                 </div>
             </Nav>
-            {/* <div className='row'> */}
+            <div className='container'>
                 <Product />
-            {/* </div> */}
+            </div>
         </section>
     )
 }
