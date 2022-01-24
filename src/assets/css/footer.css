@@ -13,4 +13,18 @@
     bottom: 0;
     height: 200px;
     width: 100%;
+    position: relative;
+}
+.scrollTop{
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.scrollTopIcon{
+    font-size: 45px;
+    color: #1C6DD0;
+}
+.scrollTopIcon:hover{
+    color: #A3E4DB;
+    cursor: pointer;
 }
