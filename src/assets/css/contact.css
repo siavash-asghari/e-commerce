@@ -1,6 +1,15 @@
 .bgContact{
     background-color: #f3f8ff;
 }
+.headerContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .imgContact{
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
