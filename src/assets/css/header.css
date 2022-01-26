@@ -46,6 +46,7 @@
     background-image: url(../image/bc.svg);
     background-repeat: no-repeat;
     background-position: 80px 25px;
+    z-index: 1;
 }
 
 .basketEmpty:after {
@@ -57,9 +58,6 @@
 }
 
 .basketFull {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     position: absolute;
     left: 5px;
     box-shadow: 0 5px 10px 2px rgb(0 0 0 / 20%);
@@ -67,11 +65,9 @@
     width: 250px;
     background-color: #FFF8F3;
     overflow-y: scroll;
+    z-index: 1;
 }
 
-/* .imgBasket {
-    height: 90px;
-} */
 
 .shoppingBag:hover {
     display: block !important;

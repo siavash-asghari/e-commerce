@@ -22,7 +22,6 @@ const Header = ({ menu }) => {
 
     const [show, setShow] = useState(false)
     const [basketToggle, setBasketToggle] = useState(false)
-    // const [searchToggle, setSearchToggle] = useState(false)
 
     const handleShow = () => {
         setShow(true)
@@ -37,11 +36,6 @@ const Header = ({ menu }) => {
     const handleHover = (status) => {
         setBasketToggle(status)
     }
-
-    // const handleSearch = (status) => {
-    //     setSearchToggle(status)
-    // }
-
 
     return (
         <>
@@ -81,9 +75,6 @@ const Header = ({ menu }) => {
             {
                 basketToggle &&
                 <div className={basketClassName}>
-                    {/* <img alt="basket" src={basket} className="imgBasket" /> */}
-                    {/* <div className="basketImage"></div> */}
-                    {/* <h5>سبد خرید شما خالی است.</h5> */}
                     <Basket />
                 </div>
             }

@@ -30,7 +30,7 @@ const handleSubmit = (event) => {
                     <h2>تماس با ما</h2>
                 </div>
             </div>
-            <hr />
+            <hr/>
             <div className='row p-3'>
                 <div className='col-xl-5 col-lg-6 col-md-6 col-sm-12 imgContact'>
                     <img src={support} alt='contact' height="265px" />

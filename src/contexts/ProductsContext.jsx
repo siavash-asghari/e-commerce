@@ -57,7 +57,6 @@ const ProductsContextProvider = (props) => {
             const basketItem = basketProduct.filter(item => item.id === product.id)
             basketItem[0].count++;
             setBasketProduct(basketProduct)
-
         }
     }
 
