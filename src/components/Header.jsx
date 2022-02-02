@@ -61,7 +61,6 @@ const Header = ({ menu }) => {
                     <ul className='list-group list-group-horizontal d-flex'>
                         <li className='list-group-item bg-light border-0'>
                             <Search />
-                            
                         </li>
                         <li className='list-group-item bg-light border-0'>
                             <CgShoppingBag className="shoppingBag" onClick={() => handleHover(!basketToggle)} />
@@ -83,5 +82,3 @@ const Header = ({ menu }) => {
 }
 
 export default Header;
-
-
