@@ -14,6 +14,7 @@ console.log(product);
 
     return (
         <div className='container'>
+        <h4>محصولات</h4>
             <div className='d-flex flex-wrap'>
                 {
                     product.map(product => (
