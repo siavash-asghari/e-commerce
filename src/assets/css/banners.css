@@ -28,3 +28,7 @@
 .image1:hover{
     cursor: pointer;
 }
+.imgSlider{
+    height: 638px;
+    width: 100%;
+}
