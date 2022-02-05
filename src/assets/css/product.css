@@ -39,8 +39,3 @@ p {
 .linkProduct{
     text-decoration: none;
 }
-
-.newRow{
-    display: flex;
-    overflow-y: hidden;
-}

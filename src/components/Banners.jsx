@@ -14,7 +14,7 @@ const Banners = () => {
   return (
     <section>
       <div className="cont container">
-        <div className="row mask">
+        <div className="row mask m-0">
           <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 image1">
             {/* <img className='img1' alt='image01' src={image01} /> */}
             <Carousel>
@@ -60,18 +60,18 @@ const Banners = () => {
             </Carousel>
           </div>
 
-          <div className="row col-xl-6 col-lg-12 col-md-12 col-sm-12 image2 images">
-            <div className="col-lg-6 col-md-6 col-sm-6 img2">
-              <img alt="image01" src={image02} />
+          <div className="row col-xl-6 col-lg-12 col-md-12 col-sm-12 image2">
+            <div className="col-lg-6 col-md-6 col-sm-12 img2">
+              <img alt="image01" src={image02} className="img02" />
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-6 img2">
-              <img alt="image01" src={image03} />
+            <div className="col-lg-6 col-md-6 col-sm-12 img2">
+              <img alt="image01" src={image03} className="img02"/>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-6 img2">
-              <img alt="image01" src={image04} />
+            <div className="col-lg-6 col-md-6 col-sm-12 img2">
+              <img alt="image01" src={image04} className="img02"/>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-6 img2">
-              <img alt="image01" src={image05} />
+            <div className="col-lg-6 col-md-6 col-sm-12 img2">
+              <img alt="image01" src={image05} className="img02"/>
             </div>
           </div>
         </div>
