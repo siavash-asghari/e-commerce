@@ -10,8 +10,7 @@ import ShopInFirstPage from './ShopInFirstPage'
 const Product = () => {
 
     const { handleSingleProduct, category } = useContext(ProductsContext)
-   
-    console.log(category.length);
+
 
     return (
         <>

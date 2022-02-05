@@ -4,17 +4,16 @@ import { Link } from 'react-router-dom'
 import AddToBasketButton from './AddToBasketButton';
 import '.././assets/css/shopInFirstPage.css'
 
-const ShopInFirstPage = () => {
+const ShopInFirstPage = ({name}) => {
 
     const { products, handleSingleProduct } = useContext(ProductsContext);
 
-const product = products.filter(product => (product.price < 30))
-console.log(product);
+    const product = products.filter(product => (product.price < 30))
 
 
     return (
         <div className='container'>
-        <h4>محصولات</h4>
+            <h4>{name}</h4>
             <div className='d-flex flex-wrap'>
                 {
                     product.map(product => (

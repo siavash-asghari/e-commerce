@@ -12,7 +12,7 @@ function App() {
     <>
       <Banners />
       <Property />
-      <ShopInFirstPage />
+      <ShopInFirstPage name="محصولات" />
       <Gallery />
       <GiftCard />
     </>
