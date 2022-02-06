@@ -18,10 +18,9 @@ import Search from "./Search";
 
 const Header = ({ menu }) => {
 
-    const {countBasket} = useContext(ProductsContext)
+    const {countBasket,basketClassName, basketToggle, handleHover} = useContext(ProductsContext)
 
     const [show, setShow] = useState(false)
-    const [basketToggle, setBasketToggle] = useState(false)
 
     const handleShow = () => {
         setShow(true)
@@ -30,12 +29,7 @@ const Header = ({ menu }) => {
         setShow(false)
     }
 
-    const { basketClassName } = useContext(ProductsContext)    
 
-
-    const handleHover = (status) => {
-        setBasketToggle(status)
-    }
 
     return (
         <>
@@ -74,7 +68,7 @@ const Header = ({ menu }) => {
             {
                 basketToggle &&
                 <div className={basketClassName}>
-                    <Basket />
+                    <Basket toggle={!basketToggle}/>
                 </div>
             }
         </>

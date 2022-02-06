@@ -9,6 +9,7 @@ import Header from './Header'
 import SingleProduct from './SingleProduct'
 import ProductsContext from '../contexts/ProductsContext';
 import Footer from './Footer'
+import Payment from './Payment'
 
 
 
@@ -47,6 +48,7 @@ const Router = () => {
                     <Route path='/contact' component={Contact} />
                     <Route path='/about' component={About} />
                     <Route path='/product/:id' component={SingleProduct} />
+                    <Route path='/payment' component={Payment} />
                     <Route component={NotFound} />
                 </Switch>
                 <Footer menu={menu} />

@@ -7,7 +7,7 @@ import AddToBasketButton from './AddToBasketButton'
 
 const SingleProduct = () => {
 
-    const { urlSinglePruduct, productComponent } = useContext(ProductsContext)
+    const { urlSinglePruduct } = useContext(ProductsContext)
     const [product, setProduct] = useState([])
     const [dataIsLoaded, setDataIsLoaded] = useState(false)
 
@@ -19,13 +19,13 @@ const SingleProduct = () => {
                 setProduct([data]);
                 setDataIsLoaded(true)
             } catch (error) {
-                console.log(error)
+                console.error(error)
             }
         }
         loadProduct();
     }, [urlSinglePruduct])
 
-    console.log(productComponent)
+
 
 
 

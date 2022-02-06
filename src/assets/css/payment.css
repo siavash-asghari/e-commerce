@@ -1,0 +1,53 @@
+.basketItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+
+}
+
+.basketDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 30%;
+}
+
+.basketDesc h6 {
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.basketCounterBtn {
+    display: flex;
+    align-items: center;
+}
+
+.basketCounterBtn p {
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+
+.basketCounterBtn Button {
+    margin: 5px;
+    height: 28px;
+    text-align: center;
+}
+
+.basketTrashTitle p {
+    margin: 0;
+}
+
+.paymentBody {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.basketButton {
+    margin: 10px auto;
+    width: 100px;
+}

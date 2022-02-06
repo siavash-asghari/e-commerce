@@ -4,12 +4,13 @@ import '.././assets/css/basket.css'
 import Trash from './Trash'
 import CounterItemProduct from './CounterItemProduct'
 import Button from 'react-bootstrap/esm/Button'
+import { Link } from 'react-router-dom'
 
 
-const Basket = () => {
+const Basket = (props) => {
 
-    const { basketProduct } = useContext(ProductsContext)
-   
+    const { basketProduct, handlePayment } = useContext(ProductsContext)
+
 
     return (
         <>
@@ -35,10 +36,14 @@ const Basket = () => {
 
             {
                 basketProduct.length !== 0 &&
-
-                <div className="d-grid gap-2 m-1">
-                    <Button variant='success' >ثبت سفارش</Button>
-                </div>
+                <Link to='/payment' className="d-grid gap-2 m-1">
+                    <Button
+                        variant='success'
+                        onClick={() => handlePayment(props.toggle)}
+                    >
+                        ثبت سفارش
+                    </Button>
+                </Link>
             }
         </>
     )
