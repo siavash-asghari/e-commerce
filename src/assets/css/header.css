@@ -7,17 +7,17 @@
 }
 
 .search {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .search:hover {
-    font-size: 28px;
+    
     color: #1C6DD0;
     cursor: pointer;
 }
 
 .shoppingBag {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .shoppingBag:hover {
@@ -68,12 +68,17 @@
     z-index: 1;
 }
 
-
 .shoppingBag:hover {
     display: block !important;
 }
 
-
+.userLogin {
+    font-size: 24px;
+}
+.userLogin:hover {
+    color: #1C6DD0;
+    cursor: pointer;
+}
 
 
 @media (max-width: 768px) {

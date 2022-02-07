@@ -2,7 +2,6 @@ import React, { useState, createContext, useEffect } from 'react';
 
 export const ProductsContext = createContext();
 
-
 const ProductsContextProvider = (props) => {
 
     const [products, setProducts] = useState([])
@@ -72,7 +71,7 @@ const ProductsContextProvider = (props) => {
         basketItem[0].count++;
         setBasketProduct(basketProduct)
     }
-
+   
     const handleDecrement = (id) => {
         let basketItem = basketProduct.filter(item => item.id === id)
         basketItem[0].count-- > 1 ? setBasketProduct(basketProduct) : handleRemoveBasket(id)

@@ -1,3 +1,8 @@
+.paymentBody {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 .basketItem {
     display: flex;
     justify-content: space-between;
@@ -41,13 +46,16 @@
     margin: 0;
 }
 
-.paymentBody {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
 .basketButton {
     margin: 10px auto;
     width: 100px;
+}
+.basketPayment{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #FFF8F3;
+    position: sticky;
+    top: 20px;
 }

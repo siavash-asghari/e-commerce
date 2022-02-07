@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom'
 const Basket = (props) => {
 
     const { basketProduct, handlePayment } = useContext(ProductsContext)
-
+    console.log("basketProduct");
+    
 
     return (
         <>

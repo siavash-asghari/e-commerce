@@ -1,4 +1,3 @@
-// import * as React from 'react';
 import * as React from "react";
 import { useState, useContext } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
@@ -7,7 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Button from 'react-bootstrap/Button'
 import Badge from 'react-bootstrap/Badge'
-import { CgShoppingBag, CgMenu } from "react-icons/cg";
+import { CgShoppingBag, CgMenu, CgUserList } from "react-icons/cg";
 import logo from '../assets/image/logo.png'
 import '.././assets/css/header.css';
 import Menu from './Menu';
@@ -18,7 +17,7 @@ import Search from "./Search";
 
 const Header = ({ menu }) => {
 
-    const {countBasket,basketClassName, basketToggle, handleHover} = useContext(ProductsContext)
+    const { countBasket, basketClassName, basketToggle, handleHover } = useContext(ProductsContext)
 
     const [show, setShow] = useState(false)
 
@@ -57,10 +56,16 @@ const Header = ({ menu }) => {
                             <Search />
                         </li>
                         <li className='list-group-item bg-light border-0'>
-                            <CgShoppingBag className="shoppingBag" onClick={() => handleHover(!basketToggle)} />
+                            <CgShoppingBag
+                                className="shoppingBag"
+                                onClick={() => handleHover(!basketToggle)}
+                            />
                             <Badge pill className="badge">
-                            {countBasket}
+                                {countBasket}
                             </Badge>
+                        </li>
+                        <li className='list-group-item bg-light border-0'>
+                            <CgUserList className="userLogin" />
                         </li>
                     </ul>
                 </Container>
@@ -68,7 +73,7 @@ const Header = ({ menu }) => {
             {
                 basketToggle &&
                 <div className={basketClassName}>
-                    <Basket toggle={!basketToggle}/>
+                    <Basket toggle={!basketToggle} />
                 </div>
             }
         </>
