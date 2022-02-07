@@ -16,22 +16,21 @@ const Payment = () => {
     useEffect(() => {
         if (basketProduct.length !== 0) {
             const price = basketProduct.map(product => (
-                product.price
-                // console.log(product.count)
+                product.price * product.count
             ))
-            console.log(price);
+
             let Finalprice = [...price]
             const reducer = (previousValue, currentValue) => previousValue + currentValue;
             const pricef = Finalprice.reduce(reducer)
             setPrices(pricef)
             setFinalPirce(pricef)
 
-        } else{
+        } else {
             setPrices(0)
             setFinalPirce(0)
         }
     }, [basketProduct]);
-    
+
 
     return (
         <div className='paymentBody container gap-5 mt-3'>
