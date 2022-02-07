@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { ProductsContext } from '../contexts/ProductsContext';
 import CounterItemProduct from './CounterItemProduct';
 import Trash from './Trash';
@@ -10,10 +10,32 @@ const Payment = () => {
 
     const { basketProduct } = useContext(ProductsContext);
 
+    const [prices, setPrices] = useState(0);
+    const [finalPirce, setFinalPirce] = useState(0);
+
+    useEffect(() => {
+        if (basketProduct.length !== 0) {
+            const price = basketProduct.map(product => (
+                product.price
+                // console.log(product.count)
+            ))
+            console.log(price);
+            let Finalprice = [...price]
+            const reducer = (previousValue, currentValue) => previousValue + currentValue;
+            const pricef = Finalprice.reduce(reducer)
+            setPrices(pricef)
+            setFinalPirce(pricef)
+
+        } else{
+            setPrices(0)
+            setFinalPirce(0)
+        }
+    }, [basketProduct]);
+    
 
     return (
         <div className='paymentBody container gap-5 mt-3'>
-            <div className=' col-lg-7 col-md-8 col-sm-6'>
+            <div className=' col-lg-7 col-md-8 col-sm-12'>
                 {
                     basketProduct.map(product => (
                         <div className='container basketItem' key={product.id}>
@@ -34,19 +56,19 @@ const Payment = () => {
                     ))
                 }
             </div>
-            <div className='basketPayment col-lg-5 col-md-4 col-sm-6 mt-5'>
-                <div>
+            <div className='basketPayment col-lg-5 col-md-4 col-sm-12 mt-5'>
+                <div className='d-flex justify-content-between'>
                     <p>قیمت کالاها</p>
-                    <h6></h6>
+                    <h6>{prices}</h6>
                 </div>
-                <div>
+                <div className='d-flex justify-content-between'>
                     <p>تخفیف کالاها </p>
-                    <h6></h6>
+                    <h6>0</h6>
                 </div>
                 <hr />
-                <div>
+                <div className='d-flex justify-content-between'>
                     <p>جمع سبد خرید</p>
-                    <h6></h6>
+                    <h6>{finalPirce}</h6>
                 </div>
 
                 <Button

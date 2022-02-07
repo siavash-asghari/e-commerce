@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 95%;
     padding: 15px;
     border-bottom: 1px solid rgb(212, 212, 212);
 
@@ -56,6 +56,24 @@
     border: 1px solid black;
     padding: 20px;
     background-color: #FFF8F3;
+    width: 300px;
     position: sticky;
     top: 20px;
 }
+
+@media (max-width: 575.98px) { 
+    .paymentBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ }
+@media (max-width: 798px) { 
+    .paymentBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ }
