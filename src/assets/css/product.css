@@ -8,6 +8,12 @@
     height: 350px;
 }
 
+.product:hover {
+    -webkit-box-shadow: 1px 1px 10px 1px rgba(143, 143, 143, 0.75);
+    -moz-box-shadow: 1px 1px 10px 1px rgba(143, 143, 143, 0.75);
+    box-shadow: 1px 1px 8px 1px rgba(143, 143, 143, 0.75);
+}
+
 .imageProduct {
     width: 200px;
     margin-bottom: 20px;
@@ -24,7 +30,8 @@ p {
     font-size: 13px;
 }
 
-.imageProduct:hover, p:hover {
+.imageProduct:hover,
+p:hover {
     cursor: pointer;
 }
 
@@ -36,6 +43,7 @@ p {
 .priceButton h6 {
     margin-right: 80px;
 }
-.linkProduct{
+
+.linkProduct {
     text-decoration: none;
 }

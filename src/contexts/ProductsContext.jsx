@@ -12,7 +12,7 @@ const ProductsContextProvider = (props) => {
     const [urlSinglePruduct, setUrlSinglePruduct] = useState('')
     const [basketToggle, setBasketToggle] = useState(false)
 
-   
+
 
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const ProductsContextProvider = (props) => {
     const handleSingleProduct = (product, id) => {
         let url = `https://fakestoreapi.com/products/${id}`
         setUrlSinglePruduct(url)
-    }     
+    }
 
 
 
@@ -70,11 +70,15 @@ const ProductsContextProvider = (props) => {
         let basketItem = basketProduct.filter(item => item.id === id)
         basketItem[0].count++;
         setBasketProduct(basketProduct)
+        console.log('inc');
+        console.log(basketProduct);
     }
-   
+
+
     const handleDecrement = (id) => {
         let basketItem = basketProduct.filter(item => item.id === id)
         basketItem[0].count-- > 1 ? setBasketProduct(basketProduct) : handleRemoveBasket(id)
+        console.log('dec');
     }
 
     const handlePayment = (status) => {
