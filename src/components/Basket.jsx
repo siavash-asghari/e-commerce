@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const Basket = (props) => {
 
-    const { basketProduct, handlePayment } = useContext(ProductsContext)
+    const { basketProduct } = useContext(ProductsContext)
     console.log("basketProduct");
     
 
@@ -40,7 +40,6 @@ const Basket = (props) => {
                 <Link to='/payment' className="d-grid gap-2 m-1">
                     <Button
                         variant='success'
-                        onClick={() => handlePayment(props.toggle)}
                     >
                         ثبت سفارش
                     </Button>

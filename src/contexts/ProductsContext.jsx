@@ -10,7 +10,6 @@ const ProductsContextProvider = (props) => {
     const [basketProduct, setBasketProduct] = useState([])
     const [countBasket, setCountBasket] = useState(0)
     const [urlSinglePruduct, setUrlSinglePruduct] = useState('')
-    const [basketToggle, setBasketToggle] = useState(false)
 
 
 
@@ -81,13 +80,7 @@ const ProductsContextProvider = (props) => {
         console.log('dec');
     }
 
-    const handlePayment = (status) => {
-        setBasketToggle(status)
-    }
-
-    const handleHover = (status) => {
-        setBasketToggle(status)
-    }
+    
 
 
 
@@ -104,9 +97,6 @@ const ProductsContextProvider = (props) => {
         handleDecrement,
         handleSingleProduct,
         urlSinglePruduct,
-        handlePayment,
-        basketToggle,
-        handleHover
     }
 
     return (

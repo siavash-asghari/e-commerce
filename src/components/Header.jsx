@@ -17,7 +17,7 @@ import Search from "./Search";
 
 const Header = ({ menu }) => {
 
-    const { countBasket, basketClassName, basketToggle, handleHover } = useContext(ProductsContext)
+    const { countBasket, basketClassName } = useContext(ProductsContext)
 
     const [show, setShow] = useState(false)
 
@@ -56,10 +56,20 @@ const Header = ({ menu }) => {
                             <Search />
                         </li>
                         <li className='list-group-item bg-light border-0'>
-                            <CgShoppingBag
-                                className="shoppingBag"
-                                onClick={() => handleHover(!basketToggle)}
-                            />
+                         
+
+
+                            <div className="shoppingHover">
+                                <CgShoppingBag
+                                    className="shoppingBag"
+                                />
+                                <div className={basketClassName}>
+                                    <Basket />
+                                </div>
+                            </div>
+
+
+
                             <Badge pill className="badge">
                                 {countBasket}
                             </Badge>
@@ -70,12 +80,7 @@ const Header = ({ menu }) => {
                     </ul>
                 </Container>
             </Navbar>
-            {
-                basketToggle &&
-                <div className={basketClassName}>
-                    <Basket toggle={!basketToggle} />
-                </div>
-            }
+         
         </>
     )
 }

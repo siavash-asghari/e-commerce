@@ -31,23 +31,7 @@
     left: 31px;
 }
 
-.basketEmpty {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    position: absolute;
-    left: 5px;
-    box-shadow: 0 5px 10px 2px rgb(0 0 0 / 20%);
-    height: 200px;
-    width: 250px;
-    background-color: #FFF8F3;
-    background-image: url(../image/bc.svg);
-    background-repeat: no-repeat;
-    background-position: 80px 25px;
-    z-index: 1;
-}
+
 
 .basketEmpty:after {
     content: 'سبد خرید شما خالی است.';
@@ -57,9 +41,39 @@
     left: 45px;
 }
 
-.basketFull {
+
+
+
+.shoppingHover{
+    padding: 2px;
+}
+.shoppingHover .basketEmpty{
+    display: none;
+}
+.shoppingHover .basketFull{
+    display: none;
+}
+.shoppingHover:hover .basketEmpty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
     position: absolute;
-    left: 5px;
+    left: -25px;
+    box-shadow: 0 5px 10px 2px rgb(0 0 0 / 20%);
+    height: 200px;
+    width: 250px;
+    background-color: #FFF8F3;
+    background-image: url(../image/bc.svg);
+    background-repeat: no-repeat;
+    background-position: 80px 25px;
+    z-index: 1;
+}
+.shoppingHover:hover .basketFull{
+    display: block;
+    position: absolute;
+    left: -25px;
     box-shadow: 0 5px 10px 2px rgb(0 0 0 / 20%);
     height: 200px;
     width: 250px;
@@ -68,9 +82,11 @@
     z-index: 1;
 }
 
-.shoppingBag:hover {
-    display: block !important;
-}
+
+
+
+
+
 
 .userLogin {
     font-size: 24px;
@@ -79,6 +95,8 @@
     color: #1C6DD0;
     cursor: pointer;
 }
+
+
 
 
 @media (max-width: 768px) {
