@@ -1,5 +1,6 @@
 .bgContact{
     background-color: #f3f8ff;
+    min-height: 55vh;
 }
 .headerContact{
     display: flex;

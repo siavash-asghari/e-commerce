@@ -11,7 +11,7 @@ const Shop = () => {
 
 
     return (
-        <section className='container'>
+        <section className='container' style={{minHeight:'60vh'}}>
             <Nav as="ul" className='my-4 d-flex justify-content-between align-items-center'>
                 <div className='d-flex'>
                     <Nav.Item style={{ fontSize: '22px' }} as="li">

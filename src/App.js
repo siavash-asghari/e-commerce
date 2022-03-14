@@ -9,13 +9,13 @@ import ShopInFirstPage from './components/ShopInFirstPage';
 function App() {
 
   return (
-    <>
+    <main>
       <Banners />
       <Property />
       <ShopInFirstPage name="محصولات" />
       <Gallery />
       <GiftCard />
-    </>
+    </main>
   );
 }
 
